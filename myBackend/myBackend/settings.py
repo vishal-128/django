@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'corsheaders', # require for producing JASON format data for product,categories etc.
     'rest_framework',
     'rest_framework.authtoken',#require for custom sign up instead using django's in-built signup
-    'api'
+    'api',
+    'api.category',
 ]
 
 MIDDLEWARE = [
@@ -57,6 +58,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'myBackend.urls'
+
 
 TEMPLATES = [
     {
