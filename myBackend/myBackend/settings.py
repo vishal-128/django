@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',#require for custom sign up instead using django's in-built signup
     'api',
     'api.category',
+    'api.product',
 ]
 
 MIDDLEWARE = [
@@ -141,7 +142,7 @@ REST_FRAMEWORK = {
     # use Django's standard 'django.contibute.auth' permission
     # allow read only acces for unauthories users
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permission.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny',
     ],
      'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
